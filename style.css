@@ -523,10 +523,6 @@ body {
    INFORMATION
 ========================== */
 
-/* ==========================
-   INFORMATION
-========================== */
-
 .information {
     background: #0b2118;
 }
@@ -636,6 +632,20 @@ body {
     transform: scale(1.03);
 }
 
+/* INFORMATION VIDEO */
+
+.information-video {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.information-video video {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
 
 /* TEXT */
 
@@ -706,6 +716,10 @@ body {
 
     .information-image img {
         height: auto;
+    }
+
+    .information-video video {
+    height: auto;
     }
 
 }
