@@ -793,36 +793,46 @@ body {
 
 /* ==========================
    FOOTER
-========================== */
+========================== */ 
 
 footer {
     background: #03100b;
-
-    padding: 60px 20px;
-
+    padding: 60px 20px 35px;
     text-align: center;
 }
 
 .footer-container {
-    max-width: 1000px;
-
+    max-width: 1100px;
     margin: auto;
 }
 
-.footer-container img {
-    width: 190px;
-
-    margin-bottom: 15px;
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-bottom: 35px;
 }
 
-.footer-container p {
-    color: #a4b5aa;
+.footer-logos img {
+    width: 160px;
+    height: 120px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.footer-title {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 .copyright {
-    margin-top: 20px;
-
+    color: #a4b5aa;
     font-size: 13px;
+    margin-top: 10px;
 }
 
 .hero {
@@ -983,5 +993,14 @@ footer {
     .info-box {
         flex-direction: column;
     }
+    .footer-logos {
+    gap: 8px;
+    flex-wrap: nowrap;
+    }
 
+    .footer-logos img {
+    width: 70px;
+    height: 60px;
+    padding: 4px;
+    }
 }
