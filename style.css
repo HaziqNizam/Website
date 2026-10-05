@@ -807,19 +807,22 @@ footer {
 }
 
 .footer-logos {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     gap: 20px;
-    flex-wrap: nowrap;
+    width: 100%;
     margin-bottom: 35px;
 }
 
 .footer-logos img {
-    width: 160px;
+    width: 100%;
+    max-width: 160px;
     height: 120px;
     object-fit: contain;
     padding: 10px;
+    margin: auto;
+    display: block;
 }
 
 .footer-title {
@@ -993,14 +996,16 @@ footer {
     .info-box {
         flex-direction: column;
     }
-    .footer-logos {
-    gap: 8px;
-    flex-wrap: nowrap;
+   .footer-logos {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    width: 100%;
     }
 
     .footer-logos img {
-    width: 70px;
-    height: 60px;
-    padding: 4px;
+    width: 100%;
+    max-width: 75px;
+    height: 65px;
+    padding: 2px;
     }
 }
