@@ -44,7 +44,7 @@ body {
 
     padding: 10px 25px;
 
-    background: rgba(30, 78, 61, 0.3);
+    background: rgba(255, 255, 255, 0.1);
 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -590,75 +590,206 @@ body {
 
 
 /* ==========================
-   DESTINATION
+   DESTINATION NEW DESIGN
 ========================== */
 
 .destination-section {
-    min-height: 650px;
+    background: #081a12;
+    padding: 110px 20px;
+    min-height: auto;
+    display: block;
+    text-align: left;
+}
 
-    padding: 100px 20px;
+.destination-container {
+    max-width: 1200px;
+    margin: auto;
+}
 
-    position: relative;
+.destination-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 60px);
+    margin-top: 12px;
+    margin-bottom: 15px;
+    color: white;
+}
 
-    display: flex;
+.destination-intro {
+    max-width: 750px;
+    color: #b8c6be;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+}
 
+
+/* DESTINATION CARD */
+
+.destination-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
     align-items: center;
 
-    justify-content: center;
+    gap: 45px;
 
-    text-align: center;
+    margin-bottom: 60px;
 
-    background-image:
-        url("bukit-batu-puteh.jpg");
+    padding: 30px;
 
-    background-size: cover;
-
-    background-position: center;
-}
-
-.destination-overlay {
-    position: absolute;
-
-    inset: 0;
+    border-radius: 25px;
 
     background:
-        rgba(0, 20, 12, 0.75);
+        linear-gradient(
+            145deg,
+            rgba(30, 67, 51, 0.75),
+            rgba(10, 34, 24, 0.9)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.35s;
 }
 
-.destination-content {
-    position: relative;
+.destination-card:hover {
+    transform: translateY(-7px);
 
-    z-index: 2;
+    border-color:
+        rgba(83,229,94,0.4);
 
-    max-width: 800px;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.3);
 }
 
-.destination-content h2 {
+
+/* IMAGE */
+
+.destination-image {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 380px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 20px;
+
+    transition: 0.5s;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.03);
+}
+
+
+/* TEXT */
+
+.destination-text {
+    padding: 20px;
+}
+
+.map-number {
+    display: inline-block;
+
+    color: #55e460;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.destination-text h3 {
     font-family: "Playfair Display", serif;
 
-    font-size: clamp(40px, 6vw, 70px);
+    font-size: 32px;
 
-    line-height: 1.1;
+    color: white;
 
-    margin: 20px 0;
+    margin-bottom: 18px;
 }
 
-.destination-content h2 span {
-    color: #55e460;
-}
+.destination-text p {
+    color: #b8c6be;
 
-.destination-content p {
-    max-width: 650px;
-
-    margin: 0 auto 35px;
-
-    color: rgba(255,255,255,0.82);
+    font-size: 16px;
 
     line-height: 1.8;
-
-    font-size: 17px;
 }
 
+
+/* SECOND CARD IMAGE RIGHT */
+
+.destination-card.reverse .destination-image {
+    order: 2;
+}
+
+.destination-card.reverse .destination-text {
+    order: 1;
+}
+
+
+/* TABLET / PHONE */
+
+@media (max-width: 850px) {
+
+    .destination-card {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .destination-card.reverse .destination-image {
+        order: 1;
+    }
+
+    .destination-card.reverse .destination-text {
+        order: 2;
+    }
+
+    .destination-image img {
+        height: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .destination-section {
+        padding: 80px 20px;
+    }
+
+    .destination-title {
+        font-size: 38px;
+    }
+
+    .destination-intro {
+        font-size: 15px;
+    }
+
+    .destination-text {
+        padding: 10px;
+    }
+
+    .destination-text h3 {
+        font-size: 26px;
+    }
+
+    .destination-text p {
+        font-size: 15px;
+    }
+
+}
 
 /* ==========================
    FOOTER
